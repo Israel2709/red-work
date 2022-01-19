@@ -1,0 +1,17 @@
+@import '../../assets/styles/colors.scss';
+
+.main-button {
+  border: 1px solid $dark-red;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: #999;
+    border-bottom: 1px solid $dark-red;
+    text-decoration: none;
+  }
+}

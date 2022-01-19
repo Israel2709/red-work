@@ -1,0 +1,49 @@
+* {
+  color: white;
+}
+
+.bg- {
+  &hex {
+    background-image: url('../src/assets/bg-hex.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  &main {
+    background-image: url('../src/assets/bg-main.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.divider {
+  height: 0.25rem;
+  width: 100%;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(105, 27, 28, 1) 100%
+  );
+}
+
+form {
+  .form-control {
+    &:not([type='radio'], [type='checkbox']) {
+      border: none;
+      border-radius: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+}
+
+.bg-heading {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  align-self: center;
+}
