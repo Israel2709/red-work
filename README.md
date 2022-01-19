@@ -1,7 +1,7 @@
 # Project Setup:
 
 - Clone Repository
-- Run `npm instal` from root directory
+- Run `npm install` from root directory
 - Once the installation is complete, run `npm run start` from root directory
 
 # Dependencies:
