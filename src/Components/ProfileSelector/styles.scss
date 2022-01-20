@@ -5,9 +5,22 @@
     display: none;
     &:checked {
       & + label {
-        border-color: $orange;
         background-color: rgba(0, 0, 0, 0.5);
         background-image: unset;
+      }
+      & + label.border-color-{
+        &green {
+          border-color: $green;
+        }
+        &red {
+          border-color: $dark-red;
+        }
+        &yellow {
+          border-color: $yellow;
+        }
+        &orange {
+          border-color: $orange;
+        }
       }
     }
   }

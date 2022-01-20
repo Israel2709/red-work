@@ -12,16 +12,16 @@ const Login = () => {
           Selecciona Perfil
         </h2>
         <div className='d-flex justify-content-between w-75 mx-auto mb-5'>
-          <RoundedSelector id='a' name='profile-selector'>
+          <RoundedSelector id='a' name='profile-selector' className='border-color-green'>
             A
           </RoundedSelector>
-          <RoundedSelector id='pr' name='profile-selector'>
+          <RoundedSelector id='pr' name='profile-selector' className='border-color-red'>
             Pr
           </RoundedSelector>
-          <RoundedSelector id='pf' name='profile-selector'>
+          <RoundedSelector id='pf' name='profile-selector' className='border-color-yellow'>
             Pf
           </RoundedSelector>
-          <RoundedSelector id='c' name='profile-selector'>
+          <RoundedSelector id='c' name='profile-selector' className='border-color-orange'>
             C
           </RoundedSelector>
         </div>
