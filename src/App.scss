@@ -1,3 +1,5 @@
+@import './assets/styles/colors.scss';
+
 * {
   color: white;
 }
@@ -46,4 +48,17 @@ form {
   font-size: 1rem;
   padding: 0.25rem 1rem;
   align-self: center;
+}
+
+$colors: (
+  'dark-red': $dark-red,
+  'green': $green,
+  'yellow': $yellow,
+  'orange': $orange
+);
+
+@each $name, $color in $colors{
+  .border-color-#{$name} {
+    border-color: $color;
+  }
 }
