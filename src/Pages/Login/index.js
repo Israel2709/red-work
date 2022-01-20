@@ -1,8 +1,24 @@
-import { Row, Col, FormGroup, Form, Input, Button } from 'reactstrap'
-import MainButton from '../../Components/MainButton'
+import { useState } from 'react'
+import { Row, Col } from 'reactstrap'
+import LoginForm from '../../Components/LoginForm'
+import PasswordRecovery from '../../Components/PasswordRecovery'
 import RoundedSelector from '../../Components/ProfileSelector'
+import UiNotification from '../../Components/UiNotification'
+import emailIcon from '../../assets/orange-email.png'
 
 const Login = () => {
+  const [forgottenPassword, setForgottenPassword] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
+
+  const requestPasswordRecovery = () => setForgottenPassword(true)
+
+  const submitMail = () => {
+    setEmailSent(true)
+    setForgottenPassword(false)
+    setTimeout(function () {
+      setEmailSent(false)
+    }, 3000)
+  }
   return (
     <Row className='min-vh-100 bg-hex'>
       <Col xs='12' className='d-flex flex-column justify-content-center'>
@@ -26,21 +42,16 @@ const Login = () => {
           </RoundedSelector>
         </div>
         <div className='divider mb-5'>&nbsp;</div>
-        <Form className='mb-3'>
-          <FormGroup className='d-flex flex-column'>
-            <Input
-              name='email'
-              placeholder='Ingresa un correo (hotmail, gmail, yahoo, etc.)'
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input name='password' placeholder='Ingresa tu contraseña' />
-          </FormGroup>
-          <MainButton className='w-75 mx-auto'>Ingresar</MainButton>
-        </Form>
-        <MainButton className='w-75 mx-auto'>
-          <a href=''>¿Olvidaste tu contraseña?</a>{' '}
-        </MainButton>
+        {!forgottenPassword && !emailSent && (
+          <LoginForm handlers={{ requestPasswordRecovery }} />
+        )}
+        {forgottenPassword && <PasswordRecovery handlers={{ submitMail }} />}
+        {emailSent && (
+          <UiNotification
+            icon={emailIcon}
+            text='En breve recibirás un correo con tu nueva contraseña'
+          />
+        )}
       </Col>
     </Row>
   )
