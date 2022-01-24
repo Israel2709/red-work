@@ -6,9 +6,24 @@
 
 .bg- {
   &hex {
-    background-image: url('../src/assets/bg-hex.jpg');
+    background: url('../src/assets/bg-hex.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    @media(min-width: 768px){
+      background: url('../src/assets/redwork-logo.png'), url('../src/assets/bg-hex-desk.jpg');
+      background-size: 4rem, cover;
+      background-position: 1rem 1rem, center;
+      background-attachment: fixed, fixed;
+      background-repeat: no-repeat;
+    }
+    @media(min-width: 1024px){
+      background: url('../src/assets/redwork-logo.png'), url('../src/assets/bg-hex-desk.jpg');
+      background-size: 6rem, cover;
+      background-position: 2rem 2rem, center;
+      background-attachment: fixed, fixed;
+      background-repeat: no-repeat;
+    }
   }
   &main {
     background-image: url('../src/assets/bg-main.jpg');

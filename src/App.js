@@ -5,7 +5,7 @@ import { Container } from 'reactstrap'
 
 function App () {
   return (
-    <div className='App'>
+    <div className='App min-vh-100 bg-hex'>
       <Container>
         <Routes>
           <Route path='/' element={<Login />} />
