@@ -1,7 +1,7 @@
 @import '../../assets/styles/colors.scss';
 
 .main-button {
-  border: 1px solid $dark-red;
+  border: 0.063rem solid $dark-red;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
@@ -11,7 +11,7 @@
   align-items: center;
   span.underline {
     color: #999;
-    border-bottom: 1px solid $dark-red;
+    border-bottom: 0.063rem solid $dark-red;
     text-decoration: none;
   }
 }
